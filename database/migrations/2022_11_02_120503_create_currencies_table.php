@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('currencies', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 16);
+            $table->string('currency_code', 6);
+            $table->float('exchange_rate');
             $table->timestamps();
         });
     }
